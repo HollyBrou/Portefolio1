@@ -3,211 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Holly Brou</title>
+    <title>Portfolio Holly Brou</title>
     <style>
-        /* Reset de base */
+        /* === RESET ET BASE === */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background-color: #000; /* noir en fond */
-            color: #fff; /* texte blanc */
+            background-color: #111; /* Noir */
+            color: #fff; /* Texte blanc */
             line-height: 1.6;
         }
 
-        /* Header */
-        header {
-            text-align: center;
-            padding: 2rem;
-            border-bottom: 1px solid #fff;
-        }
-
-        /* Cadre photo */
-        .photo-container {
-            display: inline-block;
-            padding: 5px; /* épaisseur du cadre */
-            border: 3px solid #fff; /* couleur du cadre */
-            border-radius: 10px; /* arrondi du cadre */
-            margin-bottom: 1rem;
-        }
-
-        header img.photo-holly {
-            width: 150px;
-            height: 150px;
-            border-radius: 10px; /* arrondi interne à l'image */
-            object-fit: cover;
-        }
-
-        header h1 {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        header h2 {
-            font-size: 1rem;
-            font-weight: normal;
-            margin-bottom: 1rem;
-        }
-
-        header .contact p {
-            margin: 0.2rem 0;
-        }
-
-        /* Navigation */
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            background-color: #111;
-            padding: 1rem 0;
-            border-bottom: 1px solid #fff;
-        }
-
-        nav a {
+        a {
             color: #fff;
             text-decoration: none;
-            font-weight: bold;
+            transition: 0.3s;
         }
 
-        nav a:hover {
-            text-decoration: underline;
+        a:hover {
+            color: #f39c12; /* accent doré */
         }
 
-        /* Sections */
+        h1, h2, h3 {
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 3em;
+        }
+
+        h2 {
+            font-size: 2em;
+            border-bottom: 2px solid #fff;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px 0;
+        }
+
+        /* === HEADER / PHOTO === */
+        header {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .photo-holly {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%; /* Cadre rond */
+            border: 5px solid #fff;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        /* === SECTIONS === */
         section {
-            padding: 2rem;
-            border-bottom: 1px solid #fff;
+            margin-top: 40px;
         }
 
-        section h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            text-decoration: underline;
+        .intro p {
+            font-size: 1.2em;
         }
 
-        /* Lists */
-        ul {
-            list-style-type: disc;
-            padding-left: 1.5rem;
+        /* === PROJETS === */
+        .projects {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
         }
 
         .project {
-            margin-bottom: 1.5rem;
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .project:hover {
+            transform: scale(1.05);
+            background-color: #333;
         }
 
         .project a {
-            color: #fff;
-            text-decoration: underline;
+            display: inline-block;
+            margin-top: 10px;
+            color: #f39c12;
         }
 
-        .project a:hover {
-            color: #ccc;
+        /* === OUTILS / COMPETENCES === */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background-color: #111;
-            border-top: 1px solid #fff;
-            font-size: 0.9rem;
+        .skill {
+            background-color: #222;
+            padding: 10px 20px;
+            border-radius: 50px;
+        }
+
+        /* === CONTACT === */
+        .contact p {
+            margin-bottom: 10px;
+        }
+
+        /* === RESPONSIVE === */
+        @media(max-width: 768px){
+            .projects {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
+    <div class="container">
+        <!-- HEADER -->
+        <header>
+            <!-- PLACE PHOTO DE HOLLY ICI -->
+            <img src="photo-holly.jpg" alt="Photo de Holly Brou" class="photo-holly">
+            <h1>Holly Brou</h1>
+            <p>Étudiante en Master Communication & Marketing | Recherche une alternance de 24 mois | Disponible dans toute la France</p>
+        </header>
 
-    <header>
-        <!-- CADRE PHOTO DE HOLLY -->
-        <div class="photo-container">
-            <img src="images/photo-holly.jpg" alt="Photo de Holly Brou" class="photo-holly">
-        </div>
-        
-        <h1>Holly Brou</h1>
-        <h2>Master Communication & Marketing | Alternance 24 mois | Disponible dans toute la France</h2>
-        <div class="contact">
+        <!-- INTRO -->
+        <section class="intro">
+            <h2>À propos de moi</h2>
+            <p>Passionnée par la communication et le marketing, je développe des stratégies créatives et impactantes, avec un sens aigu du design et de la gestion de projets. J'aime créer des campagnes qui marquent et collaborer sur des projets stimulants, en mettant toujours l'innovation et l'écologie au centre de mon travail.</p>
+        </section>
+
+        <!-- PROJETS -->
+        <section class="projects-section">
+            <h2>Mes projets</h2>
+            <div class="projects">
+                <div class="project">
+                    <h3>Campagne McDonald's (Marketing Stratégique)</h3>
+                    <p>Création d'affiches mettant en avant une nouvelle campagne écologique pour McDonald's.</p>
+                    <!-- PLACE LE LIEN DU PROJET ICI -->
+                    <a href="#">Voir le projet</a>
+                </div>
+                <div class="project">
+                    <h3>Festival Écologie (Gestion de projet)</h3>
+                    <p>Affiches de concert pour un festival éco-responsable avec Tiakola, Angèle et SCH.</p>
+                    <!-- PLACE LE LIEN DU PROJET ICI -->
+                    <a href="#">Voir le projet</a>
+                </div>
+                <div class="project">
+                    <h3>Importation Evian à Chypre (Marketing International)</h3>
+                    <p>Étude et stratégie pour l'importation de l'eau Evian sur le marché chypriote.</p>
+                    <!-- PLACE LE LIEN DU PROJET ICI -->
+                    <a href="#">Voir le projet</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMPETENCES -->
+        <section class="skills-section">
+            <h2>Outils & Compétences</h2>
+            <div class="skills">
+                <div class="skill">Canva</div>
+                <div class="skill">Photoshop</div>
+                <div class="skill">Illustrator</div>
+                <div class="skill">Excel</div>
+                <div class="skill">Gestion de projet</div>
+                <div class="skill">Marketing digital</div>
+                <div class="skill">Réseaux sociaux</div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="contact">
+            <h2>Contact</h2>
             <p>Email : <a href="mailto:bhollymelikalofanny@gmail.com">bhollymelikalofanny@gmail.com</a></p>
-            <p>Téléphone : 0666420629</p>
-        </div>
-    </header>
-
-    <nav>
-        <a href="#about">À propos</a>
-        <a href="#skills">Compétences</a>
-        <a href="#tools">Outils</a>
-        <a href="#projects">Projets</a>
-        <a href="#experience">Expériences</a>
-    </nav>
-
-    <section id="about">
-        <h3>À propos</h3>
-        <p>Je suis Holly Brou, étudiante en Master Communication et Marketing, à la recherche d'une alternance de 24 mois dans toute la France. Passionnée par la communication digitale, la stratégie marketing et la gestion de projets, je souhaite mettre mes compétences au service d'une entreprise dynamique.</p>
-    </section>
-
-    <section id="skills">
-        <h3>Compétences</h3>
-        <ul>
-            <li>Marketing digital et stratégie de contenu</li>
-            <li>Communication et gestion de projets</li>
-            <li>Création graphique et éditoriale</li>
-            <li>Analyse des performances et reporting</li>
-            <li>Coordination et travail en équipe</li>
-        </ul>
-    </section>
-
-    <section id="tools">
-        <h3>Outils maîtrisés</h3>
-        <ul>
-            <li>Canva</li>
-            <li>Instagram & réseaux sociaux</li>
-            <li>Pack Office (Word, Excel, PowerPoint)</li>
-            <li>Photoshop / Illustrator (bases)</li>
-            <li>Outils de gestion de projets (Monday, Trello)</li>
-        </ul>
-    </section>
-
-    <section id="projects">
-        <h3>Projets réalisés</h3>
-
-        <div class="project">
-            <h4>Campagne McDonald's - Marketing stratégique</h4>
-            <p>Création d'affiches mettant en avant l'écologie et le développement durable.</p>
-            <!-- METTRE LE LIEN DU PROJET ICI -->
-            <p>💻 <a href="#" target="_blank">Lien vers le projet</a></p>
-        </div>
-
-        <div class="project">
-            <h4>Festival Écologique - Gestion de projet</h4>
-            <p>Réalisation d'affiches pour un festival écologique avec Tiakola, Angèle et SCH.</p>
-            <!-- METTRE LE LIEN DU PROJET ICI -->
-            <p>💻 <a href="#" target="_blank">Lien vers le projet</a></p>
-        </div>
-
-        <div class="project">
-            <h4>Importation de l'eau Evian à Chypre - Marketing international</h4>
-            <p>Analyse stratégique et plan marketing pour l'importation d'un produit en Europe.</p>
-            <!-- METTRE LE LIEN DU PROJET ICI -->
-            <p>💻 <a href="#" target="_blank">Lien vers le projet</a></p>
-        </div>
-
-    </section>
-
-    <section id="experience">
-        <h3>Expériences</h3>
-        <ul>
-            <li>Création de contenu Instagram et podcasts (2023-2025)</li>
-            <li>Campagnes publicitaires pour McDonald's</li>
-            <li>Réalisation d'affiches et supports marketing pour événements culturels</li>
-        </ul>
-    </section>
-
-    <footer>
-        &copy; 2025 Holly Brou | Tous droits réservés
-    </footer>
-
+            <p>Téléphone : <a href="tel:0666420629">06 66 42 06 29</a></p>
+        </section>
+    </div>
 </body>
 </html>
-
