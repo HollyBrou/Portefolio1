@@ -4,13 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Holly Brou</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reset de base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000; /* noir en fond */
+            color: #fff; /* texte blanc */
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 2rem;
+            border-bottom: 1px solid #fff;
+        }
+
+        /* Cadre photo */
+        .photo-container {
+            display: inline-block;
+            padding: 5px; /* épaisseur du cadre */
+            border: 3px solid #fff; /* couleur du cadre */
+            border-radius: 10px; /* arrondi du cadre */
+            margin-bottom: 1rem;
+        }
+
+        header img.photo-holly {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px; /* arrondi interne à l'image */
+            object-fit: cover;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header h2 {
+            font-size: 1rem;
+            font-weight: normal;
+            margin-bottom: 1rem;
+        }
+
+        header .contact p {
+            margin: 0.2rem 0;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            background-color: #111;
+            padding: 1rem 0;
+            border-bottom: 1px solid #fff;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Sections */
+        section {
+            padding: 2rem;
+            border-bottom: 1px solid #fff;
+        }
+
+        section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            text-decoration: underline;
+        }
+
+        /* Lists */
+        ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+
+        .project {
+            margin-bottom: 1.5rem;
+        }
+
+        .project a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .project a:hover {
+            color: #ccc;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #111;
+            border-top: 1px solid #fff;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
 
     <header>
-        <!-- METTRE LA PHOTO DE HOLLY ICI : remplacer src par le chemin de la photo -->
-        <img src="images/photo-holly.jpg" alt="Photo de Holly Brou">
+        <!-- CADRE PHOTO DE HOLLY -->
+        <div class="photo-container">
+            <!-- METTRE LA PHOTO DE HOLLY ICI : remplacer src par le chemin de la photo -->
+            <img src="images/photo-holly.jpg" alt="Photo de Holly Brou" class="photo-holly">
+        </div>
         
         <h1>Holly Brou</h1>
         <h2>Master Communication & Marketing | Alternance 24 mois | Disponible dans toute la France</h2>
@@ -57,6 +172,7 @@
 
     <section id="projects">
         <h3>Projets réalisés</h3>
+
         <div class="project">
             <h4>Campagne McDonald's - Marketing stratégique</h4>
             <p>Création d'affiches mettant en avant l'écologie et le développement durable.</p>
@@ -77,6 +193,7 @@
             <!-- METTRE LE LIEN DU PROJET ICI -->
             <p>💻 <a href="#" target="_blank">Lien vers le projet</a></p>
         </div>
+
     </section>
 
     <section id="experience">
@@ -94,133 +211,4 @@
 
 </body>
 </html>
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #000;
-    color: #fff;
-    line-height: 1.6;
-}
-
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #111;
-}
-
-header img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background-color: #333;
-    margin-bottom: 20px;
-    object-fit: cover;
-}
-
-h1 {
-    font-size: 2.8rem;
-    margin-bottom: 10px;
-}
-
-h2 {
-    font-size: 1.2rem;
-    font-weight: normal;
-    margin-bottom: 20px;
-    color: #ccc;
-}
-
-.contact p {
-    margin: 5px 0;
-}
-
-nav {
-    background-color: #111;
-    padding: 15px 0;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: #bbb;
-}
-
-section {
-    padding: 50px 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-section h3 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #fff;
-    display: inline-block;
-    padding-bottom: 5px;
-}
-
-ul {
-    list-style: none;
-}
-
-ul li {
-    margin-bottom: 10px;
-}
-
-.project {
-    margin-bottom: 30px;
-}
-
-.project h4 {
-    font-size: 1.5rem;
-    margin-bottom: 5px;
-}
-
-.project p a {
-    color: #fff;
-    text-decoration: underline;
-}
-
-.project p a:hover {
-    color: #bbb;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #111;
-    color: #aaa;
-}
-
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2.2rem;
-    }
-
-    header h2 {
-        font-size: 1rem;
-    }
-
-    nav a {
-        display: block;
-        margin: 10px 0;
-    }
-}
