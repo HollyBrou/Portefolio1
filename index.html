@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Holly Brou</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <!-- METTRE LA PHOTO DE HOLLY ICI : remplacer src par le chemin de la photo -->
+        <img src="images/photo-holly.jpg" alt="Photo de Holly Brou">
+        
+        <h1>Holly Brou</h1>
+        <h2>Master Communication & Marketing | Alternance 24 mois | Disponible dans toute la France</h2>
+        <div class="contact">
+            <p>Email : <a href="mailto:bhollymelikalofanny@gmail.com">bhollymelikalofanny@gmail.com</a></p>
+            <p>Téléphone : 0666420629</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#about">À propos</a>
+        <a href="#skills">Compétences</a>
+        <a href="#tools">Outils</a>
+        <a href="#projects">Projets</a>
+        <a href="#experience">Expériences</a>
+    </nav>
+
+    <section id="about">
+        <h3>À propos</h3>
+        <p>Je suis Holly Brou, étudiante en Master Communication et Marketing, à la recherche d'une alternance de 24 mois dans toute la France. Passionnée par la communication digitale, la stratégie marketing et la gestion de projets, je souhaite mettre mes compétences au service d'une entreprise dynamique.</p>
+    </section>
+
+    <section id="skills">
+        <h3>Compétences</h3>
+        <ul>
+            <li>Marketing digital et stratégie de contenu</li>
+            <li>Communication et gestion de projets</li>
+            <li>Création graphique et éditoriale</li>
+            <li>Analyse des performances et reporting</li>
+            <li>Coordination et travail en équipe</li>
+        </ul>
+    </section>
+
+    <section id="tools">
+        <h3>Outils maîtrisés</h3>
+        <ul>
+            <li>Canva</li>
+            <li>Instagram & réseaux sociaux</li>
+            <li>Pack Office (Word, Excel, PowerPoint)</li>
+            <li>Photoshop / Illustrator (bases)</li>
+            <li>Outils de gestion de projets (Monday, Trello)</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h3>Projets réalisés</h3>
+        <div class="project">
+            <h4>Campagne McDonald's - Marketing stratégique</h4>
+            <p>Création d'affiches mettant en avant l'écologie et le développement durable.</p>
+            <!-- METTRE LE LIEN DU PROJET ICI -->
+            <p>💻 <a href="#" target="_blank">Lien vers le projet</a></p>
+        </div>
+
+        <div class="project">
+            <h4>Festival Écologique - Gestion de projet</h4>
+            <p>Réalisation d'affiches pour un festival écologique avec Tiakola, Angèle et SCH.</p>
+            <!-- METTRE LE LIEN DU PROJET ICI -->
+            <p>💻 <a href="#" target="_blank">Lien vers le projet</a></p>
+        </div>
+
+        <div class="project">
+            <h4>Importation de l'eau Evian à Chypre - Marketing international</h4>
+            <p>Analyse stratégique et plan marketing pour l'importation d'un produit en Europe.</p>
+            <!-- METTRE LE LIEN DU PROJET ICI -->
+            <p>💻 <a href="#" target="_blank">Lien vers le projet</a></p>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h3>Expériences</h3>
+        <ul>
+            <li>Création de contenu Instagram et podcasts (2023-2025)</li>
+            <li>Campagnes publicitaires pour McDonald's</li>
+            <li>Réalisation d'affiches et supports marketing pour événements culturels</li>
+        </ul>
+    </section>
+
+    <footer>
+        &copy; 2025 Holly Brou | Tous droits réservés
+    </footer>
+
+</body>
+</html>
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #111;
+}
+
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #333;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.contact p {
+    margin: 5px 0;
+}
+
+nav {
+    background-color: #111;
+    padding: 15px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #bbb;
+}
+
+section {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+section h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #fff;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+.project {
+    margin-bottom: 30px;
+}
+
+.project h4 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.project p a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.project p a:hover {
+    color: #bbb;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    color: #aaa;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    header h2 {
+        font-size: 1rem;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+}
